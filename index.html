@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAPS Project</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+    <div class="nav-title">
+        <h3>VAPS</h3>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#key">Key Contributions</a></li>
+        <li><a href="#contributors">Contributors</a></li>
+        <li><a href="#video">Teaser Video</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#funding">Funding and Support</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Evaluating Large Language Models as Virtual Annotators for
+Time-Series Physical Sensing Data</h2>
+<p>Virtual Annotators for Physical Sensing Data using Large Language Models</p>
+           <a href="#about" class="btn">
+                Learn More
+            </a>
+        </div>
+    </section>
+
+    <!-- Figure Section -->
+<section class="figure-section">
+    <div class="container">
+        <img
+            src="C:\Users\KIIT0001\Desktop\IITIntern\llm_virtual_annotater.png"
+            alt="LLM Virtual Annotator Framework"
+            class="project-figure"
+        >
+    </div>
+</section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Project Overview</h2>
+
+            <p>
+                Traditional human-in-the-loop-based annotation for time-series data like inertial data often requires access to
+alternate modalities like video or audio from the environment. These alternate sources provide the necessary
+information to the human annotator, as the raw numeric data are often too obfuscated even for an expert.
+However, this traditional approach has many concerns surrounding overall cost, efficiency, storage of additional
+modalities, time, scalability, and privacy. Interestingly, recent large language models (LLMs) are also trained
+with vast amounts of publicly available alphanumeric data, which allows them to comprehend and perform
+well on tasks beyond natural language processing. Naturally, this opens up a potential avenue to explore the
+opportunities in using these LLMs as virtual annotators where the LLMs will be directly provided the raw
+sensor data for annotation instead of relying on any alternate modality. Naturally, this could mitigate the
+problems of the traditional human-in-the-loop approach. Motivated by this observation, we perform a detailed
+study in this article to assess whether the state-of-the-art (SOTA) LLMs can be used as virtual annotators for
+labeling time-series physical sensing data. To perform this in a principled manner, we segregate the study into
+two major phases. In the first phase, we investigate the challenges an LLM like GPT-4 faces in comprehending
+raw sensor data. Considering the observations from Phase 1, in the next phase, we investigate the possibility
+of encoding the raw sensor data using SOTA SSL approaches and utilizing the projected time-series data to
+get annotations from the LLM. Detailed evaluation with four benchmark HAR datasets shows that SSL-based
+encoding and metric-based guidance allow the LLM to make more reasonable decisions and provide accurate
+annotations without requiring computationally expensive fine-tuning or sophisticated prompt engineering.
+            </p>
+        </div>
+    </section>
+
+    <!-- Objectives -->
+    <!-- Key Contributions -->
+<section id="key" class="section light-bg">
+    <div class="container">
+        <h2>Key Contributions</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Contribution 1</h3>
+                <p>
+                    Exploring LLM’s Capability as Virtual Annotators
+                    of Physical Sensing Data.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Contribution 2</h3>
+                <p>
+                    Extending LLM’s Capability as Virtual Annotators
+                    of Physical Sensing Data.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Contribution 3</h3>
+                <p>
+                    Thorough Evaluation, Analysis,
+                    and Discussion.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+   <!-- Contributors -->
+<section id="contributors" class="section">
+    <div class="container">
+
+        <h2>Contributors</h2>
+
+        <div class="team-grid">
+
+            <div class="member">
+                <img src="images/aritra_hota.jpg" alt="Aritra Hota">
+                <h3>Aritra Hota</h3>
+                <p>Indian Institute of Technology, Kharagpur, India</p>
+            </div>
+
+            <div class="member">
+                <img src="images/soumyajit_chatterjee.jpg" alt="Soumyajit Chatterjee">
+                <h3>Soumyajit Chatterjee</h3>
+                <p>Nokia Bell Labs, Cambridge, United Kingdom</p>
+            </div>
+
+            <div class="member">
+                <img src="images/sandip_chakraborty.jpg" alt="Sandip Chakraborty">
+                <h3>Sandip Chakraborty</h3>
+                <p>Indian Institute of Technology, Kharagpur, India</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Teaser Video -->
+<section id="video" class="section light-bg">
+    <div class="container">
+
+        <h2>Teaser Video</h2>
+
+        <div class="video-container">
+            <iframe
+                src="https://www.youtube.com/embed/XjmaQWTpWCg"
+                title="Teaser Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+</section> 
+
+<!-- Resources -->
+<section class="section">
+    <div class="container">
+
+        <div class="resource-buttons">
+
+            <a href="https://github.com/xiyuanzh/awesome-llm-time-series"
+               target="_blank"
+               class="resource-btn">
+                GitHub Repository
+            </a>
+
+            <a href="https://arxiv.org/abs/2403.01133"
+               target="_blank"
+               class="resource-btn">
+                Research Paper
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+    <!-- Publications -->
+<section id="publications" class="section light-bg">
+    <div class="container">
+
+        <h2>Publications</h2>
+
+        <div class="publication-card">
+
+            <h3>
+                Evaluating Large Language Models as Virtual Annotators for
+                Time-Series Physical Sensing Data
+            </h3>
+
+            <p>
+                <strong>Authors:</strong>
+                Aritra Hota, Soumyajit Chatterjee, and Sandip Chakraborty
+            </p>
+
+            <p>
+                <strong>Venue:</strong>
+                ACM Transactions on Intelligent Systems and Technology (TIST)
+            </p>
+
+            <p>
+                <strong>Volume:</strong> 16 &nbsp; | &nbsp;
+                <strong>Issue:</strong> 6 &nbsp; | &nbsp;
+                <strong>Article:</strong> 134
+            </p>
+
+            <p>
+                <strong>Publication Date:</strong>
+                January 2025
+            </p>
+
+            <p>
+                <strong>DOI:</strong>
+                <a href="https://doi.org/10.1145/3696461" target="_blank">
+                    10.1145/3696461
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Funding and Support -->
+<section id="funding" class="section">
+    <div class="container">
+
+        <h2>Funding and Support</h2>
+
+        <div class="funding-card">
+
+            <p>
+                The first author of this work was supported by the
+                <strong>Chanakya Ph.D. Fellowship</strong>
+                from the <strong>AI4ICPS Hub</strong>,
+                Indian Institute of Technology Kharagpur.
+            </p>
+
+            <p>
+                The AI4ICPS Hub is a Technology Innovation Hub established under
+                the <strong>Interdisciplinary Cyber-Physical Systems (ICPS) Division</strong>,
+                Government of India.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+   <!-- Contact -->
+<section id="contact" class="section light-bg">
+    <div class="container">
+
+        <h2>Contact</h2>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <h3>Aritra Hota</h3>
+                <p>Indian Institute of Technology Kharagpur</p>
+                <p>
+                    Email:
+                    <a href="mailto:aritrahota@kgpian.iitkgp.ac.in">
+                        aritrahota@kgpian.iitkgp.ac.in
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Soumyajit Chatterjee</h3>
+                <p>Nokia Bell Labs, Cambridge, United Kingdom</p>
+                <p>
+                    Email:
+                    <a href="mailto:soumyajit.chatterjee@nokia-bell-labs.com">
+                        soumyajit.chatterjee@nokia-bell-labs.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="contact-card">
+                <h3>Sandip Chakraborty</h3>
+                <p>Indian Institute of Technology Kharagpur</p>
+                <p><strong>Corresponding Author</strong></p>
+                <p>
+                    Email:
+                    <a href="mailto:sandipc@cse.iitkgp.ac.in">
+                        sandipc@cse.iitkgp.ac.in
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <footer>
+        <p>
+            © 2026 VAPS Project
+        </p>
+    </footer>
+
+</body>
+</html>
