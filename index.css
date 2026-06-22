@@ -13,131 +13,153 @@ body{
 html{
     scroll-behavior:smooth;
 }
+/* =====================================
+   TOP BANNER (Like StunGauge)
+===================================== */
 
-/* Navbar */
-/* =========================
+.banner {
+
+    height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url("images/iitkgp_background.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+
+/* =====================================
    NAVBAR
-   ========================= */
+===================================== */
 
 .navbar {
-    background: #003b73;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 
-    padding: 28px 48px;
-    min-height: 180px;
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 35px 90px;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
 
     box-sizing: border-box;
+
+    z-index: 1000;
 }
 
-/* =========================
-   TITLE SECTION
-   ========================= */
+/* Logo */
 
-.nav-title {
-    width: 45%;
-}
+.logo a {
 
-.nav-title h3 {
-    color: white;
-
-    font-size: 2.7rem; 
-    line-height: 1.45;
-
-    margin: 0;
-    padding: 0;
-
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* =========================
-   LINKS SECTION
-   ========================= */
-
-.nav-links {
-    width: 55%;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-
-    gap: 30px;
-
-    list-style: none;
-
-    margin: 24px 0 0 0;
-    padding: 0;
-}
-
-.nav-links li {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.nav-links a {
     color: white;
 
     text-decoration: none;
 
-    font-size: 1.1rem;      /* ~18px */
+    font-size: 1.3rem;
+
+    font-weight: 700;
+
+    border: 3px solid white;
+
+    padding: 14px 22px;
+
+    border-radius: 8px;
+}
+
+/* Menu */
+
+.nav-links {
+
+    display: flex;
+
+    gap: 50px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 1.1rem;
+
     font-weight: 500;
-
-    line-height: 1.5;
-
-    white-space: nowrap;
-
-    transition: opacity 0.2s ease;
 }
 
-.nav-links a:hover {
-    opacity: 0.8;
+/* =====================================
+   LARGE PROJECT TITLE
+===================================== */
+
+.banner-content {
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 0 40px;
 }
 
-/* Hero */
+.banner-content h2 {
 
-.hero{
-    height:100vh;
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.55),
-            rgba(0,0,0,0.55)
-        ),
-        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
+    color: white;
+
+    font-size: 5rem;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    max-width: 1200px;
+
+    margin: 0;
 }
 
-.hero-content h1{
-    font-size:4rem;
-    margin-bottom:20px;
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+    background: white;
 }
 
-.hero-content p{
-    font-size:1.3rem;
-    max-width:800px;
-    margin:auto;
+.hero-content h3 {
+
+    font-size: 3.5rem;
+
+    color: #003b73;
+
+    margin-bottom: 15px;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 30px;
-    background:#0077cc;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-}
-
-.btn:hover{
-    background:#005fa3;
-}
 
 .figure-section {
     padding: 60px 0;
@@ -174,37 +196,30 @@ html{
     background:#f4f7fb;
 }
 
-/* Cards */
-.cards {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
+.key-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: justify;
 }
 
-.card {
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-
-    background: white;
-    padding: 25px;
-
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
-    text-align: center;
+.key-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
 }
 
-.card h3 {
+.key-content ol {
+    padding-left: 30px;
+}
+
+.key-content li {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.key-content strong {
     color: #003b73;
-    margin-bottom: 15px;
-}
-
-.card p {
-    line-height: 1.6;
-    color: #444;
 }
 
 .team-grid {
@@ -322,6 +337,55 @@ html{
 .publication-card a:hover,
 .contact-card a:hover {
     text-decoration: underline;
+}
+
+.section-title {
+
+    color: #2d436d;
+
+    font-size: 3rem;
+    font-weight: 700;
+
+    margin-left: 25px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #d6dbe5;
+}
+
+.container h2 {
+
+    color: #2d436d;
+
+    font-size: 3rem;
+
+    font-weight: 700;
+
+    margin-left: 25px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #d6dbe5;
+
+    margin-bottom: 35px;
+}
+
+.iit-logo {
+    width: 180px;
+}
+
+.ai-logo {
+    width: 120px;
+}
+
+.funding-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 40px;
 }
 
 /* Footer */

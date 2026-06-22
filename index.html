@@ -7,35 +7,59 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<header class="banner">
 
-    <!-- Navbar -->
+    <!-- Navigation Row -->
     <nav class="navbar">
 
-    <div class="nav-title">
-        <h3>VAPS</h3>
+        <div class="logo">
+            <a href="#">UbiNet@CSE,IITKGP</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Publications</a></li>
+            <li><a href="#">Research Areas</a></li>
+            <li><a href="#">Sponsored Projects</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Project Title -->
+    <div class="banner-content">
+
+        <h2>
+            Evaluating Large Language Models as
+            Virtual Annotators for
+            Physical Sensing Data
+        </h2>
+
     </div>
 
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#key">Key Contributions</a></li>
-        <li><a href="#contributors">Contributors</a></li>
-        <li><a href="#video">Teaser Video</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#funding">Funding and Support</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+</header>
 
-</nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Evaluating Large Language Models as Virtual Annotators for
-Time-Series Physical Sensing Data</h2>
-<p>Virtual Annotators for Physical Sensing Data using Large Language Models</p>
-           <a href="#about" class="btn">
-                Learn More
-            </a>
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h3>
+            Virtual Annotators for Physical Sensing Data
+        </h3>
+
+    </div>
+
+</section>
+
+<!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+
+            <p>
+                This project explores the use of Large Language Models (LLMs) as virtual annotators for physical sensing data. By combining self-supervised sensor representations with LLM reasoning, we aim to replace traditional annotation pipelines that rely on costly human effort and auxiliary modalities such as video or audio. Evaluations on benchmark human activity recognition datasets show that LLMs can generate accurate labels from encoded sensor data, offering a scalable, privacy-preserving, and efficient alternative to conventional annotation methods.
+            </p>
         </div>
     </section>
 
@@ -43,77 +67,96 @@ Time-Series Physical Sensing Data</h2>
 <section class="figure-section">
     <div class="container">
         <img
-            src="C:\Users\KIIT0001\Desktop\IITIntern\llm_virtual_annotater.png"
+            src="figure6.png"
             alt="LLM Virtual Annotator Framework"
             class="project-figure"
         >
     </div>
 </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>Project Overview</h2>
-
-            <p>
-                Traditional human-in-the-loop-based annotation for time-series data like inertial data often requires access to
-alternate modalities like video or audio from the environment. These alternate sources provide the necessary
-information to the human annotator, as the raw numeric data are often too obfuscated even for an expert.
-However, this traditional approach has many concerns surrounding overall cost, efficiency, storage of additional
-modalities, time, scalability, and privacy. Interestingly, recent large language models (LLMs) are also trained
-with vast amounts of publicly available alphanumeric data, which allows them to comprehend and perform
-well on tasks beyond natural language processing. Naturally, this opens up a potential avenue to explore the
-opportunities in using these LLMs as virtual annotators where the LLMs will be directly provided the raw
-sensor data for annotation instead of relying on any alternate modality. Naturally, this could mitigate the
-problems of the traditional human-in-the-loop approach. Motivated by this observation, we perform a detailed
-study in this article to assess whether the state-of-the-art (SOTA) LLMs can be used as virtual annotators for
-labeling time-series physical sensing data. To perform this in a principled manner, we segregate the study into
-two major phases. In the first phase, we investigate the challenges an LLM like GPT-4 faces in comprehending
-raw sensor data. Considering the observations from Phase 1, in the next phase, we investigate the possibility
-of encoding the raw sensor data using SOTA SSL approaches and utilizing the projected time-series data to
-get annotations from the LLM. Detailed evaluation with four benchmark HAR datasets shows that SSL-based
-encoding and metric-based guidance allow the LLM to make more reasonable decisions and provide accurate
-annotations without requiring computationally expensive fine-tuning or sophisticated prompt engineering.
-            </p>
-        </div>
-    </section>
-
-    <!-- Objectives -->
     <!-- Key Contributions -->
 <section id="key" class="section light-bg">
+
     <div class="container">
-        <h2>Key Contributions</h2>
 
-        <div class="cards">
+        <h2 class="section-title">Key Contributions</h2>
 
-            <div class="card">
-                <h3>Contribution 1</h3>
-                <p>
-                    Exploring LLM’s Capability as Virtual Annotators
-                    of Physical Sensing Data.
-                </p>
-            </div>
+        <div class="key-content">
 
-            <div class="card">
-                <h3>Contribution 2</h3>
-                <p>
-                    Extending LLM’s Capability as Virtual Annotators
-                    of Physical Sensing Data.
-                </p>
-            </div>
+            <p>
+                This work investigates the feasibility of using Large Language Models (LLMs)
+                as virtual annotators for time-series physical sensing data and proposes a
+                novel framework for improving annotation quality through representation
+                learning. The key contributions of this work are summarized as follows:
+            </p>
 
-            <div class="card">
-                <h3>Contribution 3</h3>
-                <p>
-                    Thorough Evaluation, Analysis,
-                    and Discussion.
-                </p>
-            </div>
+            <ol>
+
+                <li>
+                    <strong>Exploring LLM’s Capability as Virtual Annotators of Physical
+                    Sensing Data.</strong>
+                    We perform a thorough analysis to investigate whether state-of-the-art
+                    LLMs such as GPT-4 can function as virtual annotators for physical
+                    sensing data, using locomotive data as a representative use case for
+                    human mobility annotation. Our study demonstrates that while LLMs
+                    can comprehend locomotive sensor signatures such as triaxial
+                    accelerometer data, they struggle to accurately annotate raw sensor
+                    streams with the correct mobility classes, even when contextual
+                    information and bootstrap examples are provided in the prompt.
+                </li>
+
+                <li>
+                    <strong>Extending LLM’s Capability as Virtual Annotators of Physical
+                    Sensing Data.</strong>
+                    Based on the findings from the pilot study, we develop an approach
+                    that encodes locomotive sensor data into an embedding space capable
+                    of capturing class-specific signatures. These embeddings provide rich
+                    contextual information to LLMs and enable more effective annotation
+                    of accelerometer signatures. We explore self-supervised contrastive
+                    learning using two configurations: (a) time-domain signatures only
+                    and (b) combined time- and frequency-domain signatures. This work
+                    introduces a novel approach for enhancing the annotation capability
+                    of pre-trained LLMs without requiring computationally expensive
+                    fine-tuning or sophisticated prompt engineering.
+                </li>
+
+                <li>
+                    <strong>Thorough Evaluation, Analysis, and Discussion.</strong>
+                    We conduct extensive experiments on four benchmark Human Activity
+                    Recognition (HAR) datasets to analyze how encoded accelerometer
+                    representations improve LLM reasoning and annotation accuracy under
+                    varying numbers of examples and activity classes. Beyond accuracy,
+                    we also evaluate practical considerations such as token consumption,
+                    API rate limits, processing time, and monetary cost. The study
+                    summarizes the trade-offs involved, highlights the benefits of using
+                    LLMs as virtual annotators, and discusses the limitations of relying
+                    solely on unimodal triaxial accelerometer data, particularly in
+                    scenarios involving multiple activity classes.
+                </li>
+
+            </ol>
 
         </div>
+
+    </div>
+
+</section>
+<!-- Resources -->
+<section class="section">
+    <div class="container">
+
+        <div class="resource-buttons">
+
+            <a href="https://arxiv.org/abs/2403.01133"
+               target="_blank"
+               class="resource-btn">
+                Research Paper
+            </a>
+
+        </div>
+
     </div>
 </section>
-
    <!-- Contributors -->
 <section id="contributors" class="section">
     <div class="container">
@@ -164,34 +207,12 @@ annotations without requiring computationally expensive fine-tuning or sophistic
     </div>
 </section> 
 
-<!-- Resources -->
-<section class="section">
-    <div class="container">
-
-        <div class="resource-buttons">
-
-            <a href="https://github.com/xiyuanzh/awesome-llm-time-series"
-               target="_blank"
-               class="resource-btn">
-                GitHub Repository
-            </a>
-
-            <a href="https://arxiv.org/abs/2403.01133"
-               target="_blank"
-               class="resource-btn">
-                Research Paper
-            </a>
-
-        </div>
-
-    </div>
-</section>
 
     <!-- Publications -->
 <section id="publications" class="section light-bg">
     <div class="container">
 
-        <h2>Publications</h2>
+        <h2 class="section-title">Publications</h2>
 
         <div class="publication-card">
 
@@ -237,7 +258,7 @@ annotations without requiring computationally expensive fine-tuning or sophistic
 <section id="funding" class="section">
     <div class="container">
 
-        <h2>Funding and Support</h2>
+        <h2 class="section-title">Funding and Support</h2>
 
         <div class="funding-card">
 
@@ -253,11 +274,22 @@ annotations without requiring computationally expensive fine-tuning or sophistic
                 the <strong>Interdisciplinary Cyber-Physical Systems (ICPS) Division</strong>,
                 Government of India.
             </p>
-
         </div>
 
     </div>
 </section>
+
+<div class="funding-logos">
+
+    <img src="images.png"
+         alt="IIT Kharagpur Logo"
+         class="iit-logo">
+
+    <img src="funding.png"
+         alt="AI4ICPS Logo"
+         class="ai-logo">
+
+</div>
 
    <!-- Contact -->
 <section id="contact" class="section light-bg">
